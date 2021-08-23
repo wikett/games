@@ -1,0 +1,41 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$id": "https://example.com/employee.schema.json",
+    "title": "Record of points",
+    "description": "This document records the details of a point",
+    "type": "object",
+    "properties": {
+        "user": {
+            "description": "full name of the user",
+            "type": "string"
+        },
+        "channel": {
+            "description": "twitch or youtube",
+            "type": "string"
+        },
+        "game": {
+            "description": "game played",
+            "type": "number"
+        },
+        "category": {
+            "description": "game category played",
+            "type": "number"
+        },
+        "created_at": {
+            "description": "when was created",
+            "type": "date",
+            "default": Date.now()
+        },
+        "points": {
+            "description": "points won",
+            "type": "number"
+        }
+    },
+    "required": [
+        "user",
+        "channel",
+        "game",
+        "category",
+        "points"
+    ]
+}
